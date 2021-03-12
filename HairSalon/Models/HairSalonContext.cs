@@ -1,17 +1,17 @@
-using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 
 namespace HairSalon.Models
 {
-    public class Stylyst
-    {
-        public Stylyst()
-        {
-            this.Clients = new HashSet<Client>();
-        }
+  public class HairSalonContext : DbContext
+  {
+    public virtual DbSet<Stylyst> Stylyst { get; set; }
+    // public DbSet<Item> Items { get; set; }
 
-        public int StylystId { get; set; }
-        public string Name { get; set; }
-        public string Specialization { get; set; }
-        public virtual ICollection<Client> Clients { get; set; }
+    public HairSalonContext(DbContextOptions options) : base(options) { }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+      optionsBuilder.UseLazyLoadingProxies();
     }
+  }
 }
