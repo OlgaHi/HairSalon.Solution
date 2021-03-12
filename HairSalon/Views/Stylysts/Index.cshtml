@@ -12,11 +12,13 @@
   <h3> No Stylysts Available</h3>
 }
 
+<div class="stylyst">
 <ul>
   @foreach(Stylyst stylyst in Model)
   {
-      <li>@Html.ActionLink($"{stylyst.Name}", "Details", new { id = stylyst.StylystId })</li>
+    <li>@Html.ActionLink($"{stylyst.Name}", "Details", new { id = stylyst.StylystId })</li>
   }
 </ul>
+</div>
 
 <p><button class="btn btn-light" id="see">@Html.ActionLink("Add new Stylyst", "Create")</button></p>

@@ -3,6 +3,7 @@ using HairSalon.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace HairSalon.Controllers
 {
@@ -32,5 +33,11 @@ namespace HairSalon.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     } 
+
+    public ActionResult Details(int id)
+    {
+    Stylyst thisStylyst = _db.Stylysts.FirstOrDefault(stylyst => stylyst.StylystId == id);
+    return View(thisStylyst);
+    }
   }
 }

@@ -8,9 +8,26 @@ h1 {
   color:blanchedalmond;
 }
 
+h2 {
+  text-align: center;
+  color: darkkhaki;
+} 
+
 h3 {
   text-align: center;
   color:crimson;
+}
+
+p {
+  color:darkgray;
+}
+
+.stylyst a {
+  color:darkkhaki;
+}
+
+li {
+  color:darkkhaki;
 }
 
 #see {
@@ -27,5 +44,5 @@ a {
 a:hover {
   text-decoration: none;
   font-size:150%;
-  color: black;
+  color-adjust: 1;
 }
