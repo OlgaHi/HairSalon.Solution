@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using ToDoList.Models;
+using HairSalon.Models;
 
-namespace ToDoList
+namespace HairSalon
 {
   public class Startup
   {
@@ -14,7 +14,7 @@ namespace ToDoList
     {
     var builder = new ConfigurationBuilder()
         .SetBasePath(env.ContentRootPath)
-        .AddJsonFile("appsettings.json"); //this line replaces .AddEnvironmentVariables();
+        .AddJsonFile("appsettings.json"); 
     Configuration = builder.Build();
     }
     public IConfigurationRoot Configuration { get; set; }
@@ -23,11 +23,10 @@ namespace ToDoList
     {
     services.AddMvc();
 
-    //New code
     services.AddEntityFrameworkMySql()
-        .AddDbContext<ToDoListContext>(options => options
+        .AddDbContext<HairSalonContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
-}
+    }
 
     public void Configure(IApplicationBuilder app)
     {
@@ -39,12 +38,12 @@ namespace ToDoList
         routes.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
       });
 
+      app.UseStaticFiles();
+
       app.Run(async (context) =>
       {
         await context.Response.WriteAsync("Hello World!");
       });
     }
   }
-
-
 }
