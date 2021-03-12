@@ -19,5 +19,18 @@ namespace HairSalon.Controllers
       List<Stylyst> model = _db.Stylysts.ToList();
       return View(model);
     }
+
+    public ActionResult Create()
+    {
+      return View();
+    }
+
+    [HttpPost]
+    public ActionResult Create(Stylyst stylyst)
+    {
+      _db.Stylysts.Add(stylyst);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    } 
   }
 }
