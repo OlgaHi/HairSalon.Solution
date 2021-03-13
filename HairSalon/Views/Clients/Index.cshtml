@@ -11,10 +11,11 @@
 {
   <h3>No clients</h3>
 } 
+
 <div class="client">
 @foreach (Client client in Model)
 {
-  <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) | @client.Stylyst.Name</li>
+  <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) | @client.Stylist.Name</li>
 }
 </div>
 <p><button class="btn btn-light" id="see">@Html.ActionLink("Add new client", "Create")</button></p>
