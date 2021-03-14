@@ -39,5 +39,19 @@ namespace HairSalon.Controllers
     Stylist thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
     return View(thisStylist);
     }
+
+    // public ActionResult Edit(int id)
+    // {
+    // var thisCategory = _db.Categories.FirstOrDefault(categorie => categorie.CategoryId == id);
+    // return View(thisCategory);
+    // }
+
+    // [HttpPost]
+    // public ActionResult Edit(Category category)
+    // {
+    // _db.Entry(category).State = EntityState.Modified;
+    // _db.SaveChanges();
+    // return RedirectToAction("Index");
+    // }
   }
 }
