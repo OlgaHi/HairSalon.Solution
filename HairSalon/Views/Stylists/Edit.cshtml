@@ -1,0 +1,27 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Stylist
+
+<h2>Edit</h2>
+
+<h3>Edit profile: @Html.DisplayFor(model => model.Name)</h3>
+
+@using (Html.BeginForm())
+{ 
+   <div class="container">
+    <div class="col d-flex justify-content-center">
+      <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name, new { required = "required"})
+      </div>
+      <div class="form-group">
+        @Html.LabelFor(model => model.Specialization)
+        @Html.TextBoxFor(model => model.Specialization, new { required = "required"})
+      </div>
+    </div>
+    <button class="btn btn-light" id="see"><input type="submit" value="Save" /></button>
+  </div>
+}
+<button class="btn btn-light" id="see">@Html.ActionLink("All Stylists", "Index")</button>
