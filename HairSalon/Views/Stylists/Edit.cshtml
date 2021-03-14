@@ -12,13 +12,14 @@
 { 
    <div class="container">
     <div class="col d-flex justify-content-center">
+      @Html.HiddenFor(model => model.StylistId)
       <div class="form-group">
         @Html.LabelFor(model => model.Name)
-        @Html.TextBoxFor(model => model.Name)
+        @Html.EditorFor(model => model.Name)
       </div>
       <div class="form-group">
         @Html.LabelFor(model => model.Specialization)
-        @Html.TextBoxFor(model => model.Specialization)
+        @Html.EditorFor(model => model.Specialization)
       </div>
     </div>
     <button class="btn btn-light" id="see"><input type="submit" value="Save" /></button>

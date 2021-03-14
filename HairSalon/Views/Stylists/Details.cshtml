@@ -19,7 +19,7 @@
   <p>Total clients: @Model.Clients.Count</p>
   @foreach (Client client in @Model.Clients)
   {
-    <li>Client: @client.Name</li>
+    <li class="stylist">@Html.ActionLink($"{client.Name}", "Details", "Clients",new { id = client.ClientId}, null)</li>
   }
 </ul>
 
