@@ -6,12 +6,19 @@
 
 <h1>Add a new stylist</h1>
 @using (Html.BeginForm())
-{ <p>
-  @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
-  @Html.LabelFor(model => model.Specialization)
-  @Html.TextBoxFor(model => model.Specialization)
-  <input type="submit" value="Add" />
-  </p>
+{ 
+   <div class="container">
+    <div class="col d-flex justify-content-center">
+      <div class="form-group">
+        @Html.LabelFor(model => model.Name)
+        @Html.TextBoxFor(model => model.Name)
+      </div>
+      <div class="form-group">
+        @Html.LabelFor(model => model.Specialization)
+        @Html.TextBoxFor(model => model.Specialization)
+      </div>
+    </div>
+    <button class="btn btn-light" id="see"><input type="submit" value="Add" /></button>
+  </div>
 }
-<p>@Html.ActionLink("All Stylists", "Index")</p>
+<button class="btn btn-light" id="see">@Html.ActionLink("All Stylists", "Index")</button>

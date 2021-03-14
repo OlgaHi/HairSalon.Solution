@@ -16,13 +16,14 @@
     <p>No clients</p>
   }
 
+  <p>Total clients: @Model.Clients.Count</p>
   @foreach (Client client in @Model.Clients)
   {
     <li>Client: @client.Name</li>
   }
 </ul>
 
-<p>@Html.ActionLink("Add a New Client", "Create", "Clients")</p>
-<p><button class="btn btn-light" id="see">@Html.ActionLink("Back to stylists", "Index")</button></p>
+<button class="btn btn-light" id="see">@Html.ActionLink("Add a New Client", "Create", "Clients")</button>
+<button class="btn btn-light" id="see">@Html.ActionLink("Back to stylists", "Index")</button>
 @* <p>@Html.ActionLink("Edit Category", "Edit", new { id = Model.CategoryId })</p> *@
 @* <p>@Html.ActionLink("Delete category", "Delete", new { id = Model.CategoryId })</p> *@

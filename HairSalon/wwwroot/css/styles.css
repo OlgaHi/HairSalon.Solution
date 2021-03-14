@@ -1,11 +1,13 @@
 body {
-  /* background-color:black; */
+  background-color:black;
   padding: 10%;
+  color:darkgray;
 }
 
 h1 {
   text-align: center;
   color:blanchedalmond;
+  
 }
 
 h2 {
@@ -18,11 +20,7 @@ h3 {
   color:crimson;
 }
 
-p {
-  color:darkgray;
-}
-
-.stylyst a {
+.stylist a {
   color:darkkhaki;
 }
 
