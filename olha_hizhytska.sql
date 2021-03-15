@@ -25,7 +25,7 @@ DROP TABLE IF EXISTS `clients`;
 CREATE TABLE `clients` (
   `ClientId` int NOT NULL AUTO_INCREMENT,
   `Name` varchar(255) DEFAULT NULL,
-  `PhoneNumber` varchar(255) DEFAULT NULL,
+  `PhoneNumber` int DEFAULT NULL,
   `StylistId` int DEFAULT '0',
   PRIMARY KEY (`ClientId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -37,7 +37,7 @@ CREATE TABLE `clients` (
 
 LOCK TABLES `clients` WRITE;
 /*!40000 ALTER TABLE `clients` DISABLE KEYS */;
-INSERT INTO `clients` VALUES (1,'Maria','123456',2),(3,'Javier','234567',3);
+INSERT INTO `clients` VALUES (1,'Maria',123456,2),(3,'Javier',234567,3);
 /*!40000 ALTER TABLE `clients` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -75,4 +75,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-14 15:30:34
+-- Dump completed on 2021-03-14 17:20:44
