@@ -52,7 +52,7 @@ Please follow this steps:
  - Download [.NET 5 SDK (Software Development Kit)](https://https://dotnet.microsoft.com/download/dotnet/thank-you/sdk-5.0.100-macos-x64-installer). Clicking this link will prompt a file download for your particular OS from Microsoft.
  - Open the file. Follow the installation steps.
  - Confirm the installation is successful by opening your terminal and running the command $ dotnet --version. You should see something like this in response: 5.0.100. This means .NET was successfully installed.
- - Navigate to the /Tracker folder 
+ - Navigate to the /HairSalon folder 
  - Run the following command: dotnet build
  - Run the following command to execute this compiled code: dotnet run
  - In browser navigate to http://localhost:5000
